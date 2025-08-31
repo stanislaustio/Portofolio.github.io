@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografeel | Portofolio Fotografi & Videografi</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Menggunakan font Inter sebagai default */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Efek overlay gelap pada hero section */
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        
+        /* Konten hero di atas overlay */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header & Navigasi -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-white">Fotografeel</a>
+                
+                <!-- Navigasi Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="#services" class="text-gray-300 hover:text-white transition-colors">Layanan</a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors">Portofolio</a>
+                    <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-md transition-colors">Hubungi Saya</a>
+                </div>
+                
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Menu Mobile (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#home" class="block py-2 text-gray-300 hover:text-white">Home</a>
+                <a href="#services" class="block py-2 text-gray-300 hover:text-white">Layanan</a>
+                <a href="#portfolio" class="block py-2 text-gray-300 hover:text-white">Portofolio</a>
+                <a href="#contact" class="block mt-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-center px-4 py-2 rounded-md">Hubungi Saya</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-center bg-cover bg-center hero-overlay" style="background-image: url('https://i.imgur.com/Ls5D0h3.jpeg');">
+            <!-- GANTI URL DI ATAS DENGAN URL GAMBAR TERBAIK ANDA -->
+            <div class="hero-content container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">Mengabadikan Momen Berharga Anda</h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Layanan fotografi dan videografi profesional untuk setiap momen spesial dalam hidup Anda.</p>
+                <a href="#portfolio" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-transform transform hover:scale-105">Lihat Karya Kami</a>
+            </div>
+        </section>
+
+        <!-- Layanan Section -->
+        <section id="services" class="relative py-20 bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/111827/ffffff?text=Latar+Belakang+Layanan');">
+            <!-- GANTI URL DI ATAS DENGAN GAMBAR LATAR ANDA -->
+            <div class="absolute inset-0 bg-gray-900/80 backdrop-blur-sm"></div>
+            <div class="relative container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Layanan Kami</h2>
+                    <p class="text-gray-400 mt-2">Kami menyediakan berbagai layanan multimedia untuk kebutuhan Anda.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Layanan 1: Fotografi -->
+                    <div class="bg-gray-800 p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 bg-indigo-600 rounded-full mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2-2H5a2 2 0 01-2-2V9z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Fotografi</h3>
+                        <p class="text-gray-400">Pernikahan, pre-wedding, lamaran, wisuda, produk, dan dokumentasi acara.</p>
+                    </div>
+                    <!-- Layanan 2: Videografi -->
+                    <div class="bg-gray-800 p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                         <div class="flex items-center justify-center h-16 w-16 bg-indigo-600 rounded-full mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Videografi</h3>
+                        <p class="text-gray-400">Video sinematik, dokumentasi acara, video profil, dan konten media sosial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portofolio Section -->
+        <section id="portfolio" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Galeri Portofolio</h2>
+                    <p class="text-gray-400 mt-2">Beberapa karya terbaik yang pernah kami abadikan dalam berbagai momen.</p>
+                </div>
+
+                <!-- Kategori 1: Graduation -->
+                <div class="mb-20">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center md:text-left">Graduation</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <!-- Ganti dengan URL gambar Anda -->
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://i.imgur.com/aKtlrGZ.jpeg" alt="Foto Wisuda 1" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/6366f1/ffffff?text=Wisuda+2" alt="Foto Wisuda 2" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/818cf8/ffffff?text=Wisuda+3" alt="Foto Wisuda 3" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/a5b4fc/ffffff?text=Wisuda+4" alt="Foto Wisuda 4" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <!-- GANTI # DENGAN LINK GOOGLE DRIVE ANDA -->
+                        <a href="#" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-md transition-colors transform hover:scale-105">Lihat Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Kategori 2: Pre wedding/ pre sweet seventeen -->
+                <div class="mb-20">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center md:text-left">Pre-Wedding / Sweet Seventeen</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <!-- Ganti dengan URL gambar Anda -->
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x800/312e81/ffffff?text=Pre-Wedding+1" alt="Foto Pre-Wedding 1" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/4f46e5/ffffff?text=Pre-Wedding+2" alt="Foto Pre-Wedding 2" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/6366f1/ffffff?text=Sweet+17" alt="Foto Sweet Seventeen" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x800/818cf8/ffffff?text=Pre-Wedding+3" alt="Foto Pre-Wedding 3" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <!-- GANTI # DENGAN LINK GOOGLE DRIVE ANDA -->
+                        <a href="#" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-md transition-colors transform hover:scale-105">Lihat Selengkapnya</a>
+                    </div>
+                </div>
+                
+                <!-- Kategori 3: Event Documentary -->
+                <div class="mb-20">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center md:text-left">Event Documentary</h3>
+                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <!-- Ganti dengan URL gambar Anda -->
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/312e81/ffffff?text=Event+1" alt="Dokumentasi Acara 1" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/4f46e5/ffffff?text=Event+2" alt="Dokumentasi Acara 2" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/6366f1/ffffff?text=Event+3" alt="Dokumentasi Acara 3" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/818cf8/ffffff?text=Event+4" alt="Dokumentasi Acara 4" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <!-- GANTI # DENGAN LINK GOOGLE DRIVE ANDA -->
+                        <a href="#" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-md transition-colors transform hover:scale-105">Lihat Selengkapnya</a>
+                    </div>
+                </div>
+
+                <!-- Kategori 4: After Movie -->
+                <div class="mb-20">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center md:text-left">After Movie</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- GANTI data-video-id DENGAN ID VIDEO YOUTUBE ANDA, DAN GANTI src GAMBAR THUMBNAIL -->
+                        <div data-video-id="8si0F4_7B74" class="video-thumbnail block group cursor-pointer">
+                            <div class="relative overflow-hidden rounded-lg shadow-lg">
+                                <img src="https://i.imgur.com/0S3zHwB.jpeg" alt="After Movie 1" class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110">
+                                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- GANTI data-video-id DENGAN ID VIDEO YOUTUBE ANDA, DAN GANTI src GAMBAR THUMBNAIL -->
+                         <div data-video-id="ogfYd705cRs" class="video-thumbnail block group cursor-pointer">
+                             <div class="relative overflow-hidden rounded-lg shadow-lg">
+                                <img src="https://placehold.co/1280x720/312e81/ffffff?text=Thumbnail+After+Movie+2" alt="After Movie 2" class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110">
+                                 <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <!-- GANTI # DENGAN LINK GOOGLE DRIVE ANDA -->
+                        <a href="#" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-md transition-colors transform hover:scale-105">Lihat Selengkapnya</a>
+                    </div>
+                </div>
+                
+                <!-- Kategori 5: Team Work Documentation -->
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center md:text-left">Team Work Documentation</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <!-- Ganti dengan URL gambar Anda -->
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/1e1b4b/ffffff?text=Team+1" alt="Dokumentasi Tim 1" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/312e81/ffffff?text=Team+2" alt="Dokumentasi Tim 2" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/4f46e5/ffffff?text=Team+3" alt="Dokumentasi Tim 3" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                        <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://placehold.co/600x400/6366f1/ffffff?text=Team+4" alt="Dokumentasi Tim 4" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"></div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <!-- GANTI # DENGAN LINK GOOGLE DRIVE ANDA -->
+                        <a href="#" target="_blank" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-md transition-colors transform hover:scale-105">Lihat Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak Section -->
+        <section id="contact" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Tertarik Bekerja Sama?</h2>
+                 <p class="text-gray-400 mb-8 max-w-xl mx-auto">Jangan ragu untuk menghubungi kami untuk konsultasi dan penawaran harga. Kami siap membantu mewujudkan visi Anda.</p>
+                 <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
+                    <!-- GANTI DENGAN INFORMASI KONTAK ANDA -->
+                    <a href="https://instagram.com/broadcast.unnes" target="_blank" class="flex items-center space-x-3 text-lg text-gray-300 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span>@broadcast.unnes</span>
+                    </a>
+                     <a href="mailto:stanislaustiopriantama@g,ail.com" class="flex items-center space-x-3 text-lg text-gray-300 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        <span>emailanda@contoh.com</span>
+                    </a>
+                     <a href="https://wa.me/628885672692" target="_blank" class="flex items-center space-x-3 text-lg text-gray-300 hover:text-white transition-colors">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.357 1.846 6.067l-1.289 4.713 4.935-1.305z"/></svg>
+                        <span>+62 812-3456-7890</span>
+                    </a>
+                 </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modal Video -->
+    <div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center hidden">
+        <div class="relative w-full max-w-4xl mx-4">
+            <button id="close-modal" class="absolute -top-10 -right-2 text-white text-4xl">&times;</button>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe id="video-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800/50">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+            <p>&copy; 2025 Fotografeel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script untuk Menu Mobile -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menutup menu mobile jika link di klik
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+        
+        // Script untuk Modal Video
+        const videoModal = document.getElementById('video-modal');
+        const closeModal = document.getElementById('close-modal');
+        const videoIframe = document.getElementById('video-iframe');
+        const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+
+        videoThumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                const videoId = thumbnail.getAttribute('data-video-id');
+                videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                videoModal.classList.remove('hidden');
+            });
+        });
+
+        const closeVideoModal = () => {
+            videoIframe.src = ''; // Hentikan video saat modal ditutup
+            videoModal.classList.add('hidden');
+        }
+
+        closeModal.addEventListener('click', closeVideoModal);
+        
+        videoModal.addEventListener('click', (e) => {
+             if (e.target === videoModal) { // Tutup modal jika klik di luar video
+                closeVideoModal();
+            }
+        });
+    </script>
+</body>
+</html>
+
